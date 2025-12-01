@@ -338,11 +338,12 @@
     </p>
 
     <form
+      id="contactForm"
       action="https://formspree.io/f/mgvgyvel"
       method="POST"
       class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4"
     >
-      <input type="hidden" name="_redirect" value="https://mmiles9614.github.io/RV-Rental-Automation-Services/thank-you.html">
+
       <!-- Name -->
       <div class="col-span-1">
         <label for="name" class="block text-sm font-medium text-slate-700">Full name</label>
@@ -413,6 +414,38 @@
     </p>
   </div>
 </section>
+
+<script>
+  (function () {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault(); // stop normal browser redirect to Formspree
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch('https://formspree.io/f/mgvgyvel', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: formData
+        });
+
+        if (response.ok) {
+          // On success, send them to your own thank-you page
+          window.location.href = 'https://mmiles9614.github.io/RV-Rental-Automation-Services/thank-you.html';
+        } else {
+          alert('There was a problem sending your message. Please try again.');
+        }
+      } catch (err) {
+        console.error(err);
+        alert('Network error. Please try again.');
+      }
+    });
+  })();
+</script>
+
 
 
     <!-- FOOTER -->
