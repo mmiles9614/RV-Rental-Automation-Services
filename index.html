@@ -329,24 +329,90 @@
       </div>
     </section>
 
-    <section class="contact" id="contact">
-     <div class="container">
-      <h2>Contact Me</h2>
-      <p style="text-align:center; margin-top:10px; color:#4b5563;">
-      Have an RV or thinking about renting one? Tell me a bit about it and I’ll send you a custom plan.
-      </p>
+   <!-- CONTACT -->
+<section id="contact" class="container mx-auto py-12">
+  <div class="max-w-3xl mx-auto bg-white rounded-xl p-6 shadow-sm border border-slate-100">
+    <h3 class="text-xl font-bold text-navy">Ready to get more bookings?</h3>
+    <p class="mt-2 text-slate-600">
+      Tell me a bit about your RV and your goals. I’ll send you a custom plan within 24 hours designed to increase bookings and automate your workflow.
+    </p>
 
-      <form class="contact-form" action="https://formspree.io/f/mgvgyvel" method="POST">
-  <input type="text" name="name" placeholder="Your name" required>
-  <input type="email" name="email" placeholder="Your email" required>
-  <input type="text" name="rv_details" placeholder="RV year, make, model (optional)">
-  <textarea name="message" rows="4" placeholder="Tell me about your RV and what you want help with" required></textarea>
-  <button type="submit">Send Message</button>
-</form>
+    <form
+      action="https://formspree.io/f/mgvgyvel"
+      method="POST"
+      class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4"
+    >
+      <!-- Name -->
+      <div class="col-span-1">
+        <label for="name" class="block text-sm font-medium text-slate-700">Full name</label>
+        <input
+          id="name"
+          name="name"
+          required
+          class="mt-1 block w-full rounded-md border border-slate-200 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-200"
+          placeholder="Jane Doe"
+        >
+      </div>
 
+      <!-- Email -->
+      <div class="col-span-1">
+        <label for="email" class="block text-sm font-medium text-slate-700">Email</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          required
+          class="mt-1 block w-full rounded-md border border-slate-200 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-200"
+          placeholder="you@example.com"
+        >
+      </div>
 
-     </div>
-    </section>
+      <!-- RV Details -->
+      <div class="col-span-1">
+        <label for="rv_details" class="block text-sm font-medium text-slate-700">RV details</label>
+        <input
+          id="rv_details"
+          name="rv_details"
+          class="mt-1 block w-full rounded-md border border-slate-200 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-200"
+          placeholder="2022 Kodiak Dutchmen, length, sleeps, etc."
+        >
+      </div>
+
+      <!-- Message Box -->
+      <div class="col-span-1 md:col-span-2">
+        <label for="message" class="block text-sm font-medium text-slate-700">
+          What do you want help with?
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          required
+          class="mt-1 block w-full rounded-md border border-slate-200 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-200"
+          placeholder="More bookings, automation setup, website build, etc."
+        ></textarea>
+      </div>
+
+      <!-- Submit & Demo Link -->
+      <div class="col-span-1 md:col-span-2 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <button
+          type="submit"
+          class="bg-navy text-white px-5 py-3 rounded-md hover:bg-navy/90 transition"
+        >
+          Send My Plan
+        </button>
+        <div class="text-sm text-slate-500">
+          Or book a demo: <a href="#" class="text-indigo-600 font-medium">Calendly / Cal.com</a>
+        </div>
+      </div>
+    </form>
+
+    <p class="mt-4 text-xs text-slate-500">
+      We respond within 24 hours. Your information is secure and will never be shared.
+    </p>
+  </div>
+</section>
+
 
     <!-- FOOTER -->
     <footer class="border-t border-slate-200 mt-12 bg-white">
