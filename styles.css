@@ -1,0 +1,253 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* NAVBAR */
+nav {
+  background-color: #ffffff;
+  padding: 20px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+nav .logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0F1C4D; /* Premium Navy */
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  color: #0F1C4D;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  opacity: 0.7;
+}
+
+/* HERO SECTION */
+.hero {
+  background-color: #F8FAFC;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #0F1C4D;
+}
+
+.hero p {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #4b5563;
+}
+
+.hero .cta-btn {
+  display: inline-block;
+  margin-top: 30px;
+  background-color: #0F1C4D;
+  color: #ffffff;
+  padding: 14px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.hero .cta-btn:hover {
+  background-color: #15276b;
+}
+
+/* SERVICES */
+.services {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.services h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #0F1C4D;
+  margin-bottom: 50px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background-color: #F8FAFC;
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid #e5e7eb;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+.service-card h3 {
+  font-size: 22px;
+  color: #0F1C4D;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  color: #4b5563;
+}
+
+/* PRICING */
+.pricing {
+  background-color: #F8FAFC;
+  padding: 80px 0;
+}
+
+.pricing h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #0F1C4D;
+  margin-bottom: 50px;
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+}
+
+.price-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+}
+
+.price-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0F1C4D;
+}
+
+.price-card .price {
+  font-size: 40px;
+  font-weight: 800;
+  margin: 20px 0;
+  color: #0F1C4D;
+}
+
+.price-card ul {
+  list-style: none;
+  margin: 20px 0;
+  color: #4b5563;
+}
+
+.price-card ul li {
+  margin-bottom: 10px;
+}
+
+.price-card .btn {
+  display: inline-block;
+  background-color: #0F1C4D;
+  color: #fff;
+  padding: 12px 26px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.price-card .btn:hover {
+  background-color: #15276b;
+}
+
+/* CONTACT SECTION */
+.contact {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #0F1C4D;
+}
+
+.contact-form {
+  margin: 40px auto;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 16px;
+}
+
+.contact-form button {
+  background-color: #0F1C4D;
+  padding: 14px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.contact-form button:hover {
+  background-color: #15276b;
+}
+
+/* FOOTER */
+footer {
+  background-color: #0F1C4D;
+  color: #ffffff;
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 14px;
+}

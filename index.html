@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RV Rental Automation — Premium</title>
+  <meta name="description" content="RV Rental websites + automation that gets you more bookings and less work." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config: set primary navy color
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              DEFAULT: '#0b2545',
+              50: '#f3f6fa',
+              100: '#e6eef6',
+              200: '#bfd8f0',
+              300: '#99c2ea',
+              400: '#4e99da',
+              500: '#0b2545',
+              600: '#09203c',
+              700: '#06182c',
+              800: '#041222',
+              900: '#020b16'
+            },
+            brand: '#0b2545'
+          },
+          container: {
+            center: true,
+            padding: '1rem',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* small utility for subtle glass card */
+    .glass {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(6px);
+    }
+  </style>
+</head>
+<body class="antialiased text-slate-800 bg-gradient-to-b from-white via-slate-50 to-slate-100">
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur-sm border-b border-slate-200">
+    <div class="container mx-auto flex items-center justify-between py-4">
+      <a href="#" class="flex items-center gap-3">
+        <svg width="40" height="40" viewBox="0 0 24 24" class="text-navy" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <rect width="24" height="24" rx="6" fill="#0B2545"/>
+          <path d="M7 14V10L11 8L15 10V14" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="text-lg font-semibold text-navy">RV Rental Automation</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#services" class="hover:underline">Services</a>
+        <a href="#pricing" class="hover:underline">Pricing</a>
+        <a href="#features" class="hover:underline">Features</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+        <a href="#products" class="text-navy font-medium px-3 py-2 rounded-md border border-navy/10 hover:bg-navy/5">Shop</a>
+      </nav>
+
+      <div class="md:hidden">
+        <button id="menuBtn" aria-label="Open menu" class="p-2 rounded-md hover:bg-slate-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-16">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-navy leading-tight">
+          RV rental websites & automations that <span class="text-indigo-600">book more guests</span> — while you sleep.
+        </h1>
+        <p class="mt-4 text-lg text-slate-600 max-w-xl">
+          Premium websites, AI messaging flows, calendar sync, damage workflows, and recurring management — built specifically for RV owners who want more bookings and less headaches.
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#pricing" class="inline-flex items-center gap-2 bg-navy text-white px-5 py-3 rounded-md shadow hover:shadow-lg">
+            Start with a package
+          </a>
+          <a href="#contact" class="inline-flex items-center gap-2 border border-slate-200 px-4 py-3 rounded-md hover:bg-slate-50">
+            Book a free 15-min demo
+          </a>
+        </div>
+
+        <ul class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+          <li class="flex items-start gap-3">
+            <svg class="h-6 w-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
+            <span class="text-slate-600">Fast setup: launch in 7 days</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="h-6 w-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
+            <span class="text-slate-600">Automated guest messaging</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="h-6 w-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
+            <span class="text-slate-600">Integrated booking & upsells</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="relative">
+        <div class="glass p-6 rounded-2xl shadow-lg border border-slate-100">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="text-sm font-medium text-slate-500">Featured listing</h3>
+              <h2 class="text-xl font-semibold text-navy mt-1">Cozy 2022 Kodiak — Beach Ready</h2>
+            </div>
+            <div class="text-right">
+              <div class="text-sm text-slate-500">From</div>
+              <div class="text-2xl font-bold text-indigo-600">$129/night</div>
+            </div>
+          </div>
+
+          <div class="mt-4 grid grid-cols-2 gap-3">
+            <div class="rounded-lg overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1515548210951-7a7d7e47a9ba?q=80&w=1000&auto=format&fit=crop&crop=faces" alt="RV exterior" class="w-full h-40 object-cover">
+            </div>
+            <div class="flex flex-col justify-between gap-3">
+              <p class="text-sm text-slate-600">Fully managed pickup, linens, and short-term insurance upsells. Automatic check-in instructions sent 48 hrs before pickup.</p>
+              <a href="#contact" class="mt-2 inline-block text-sm font-medium text-navy hover:underline">Get this layout for your listing →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="absolute -right-6 -bottom-6 w-36 h-36 rounded-lg bg-gradient-to-br from-indigo-100 to-indigo-50 shadow-lg flex items-center justify-center">
+          <div class="text-center">
+            <div class="text-xs text-indigo-700 font-semibold">Launch</div>
+            <div class="text-xl font-bold text-navy">7 days</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="container mx-auto py-12">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-2xl font-bold text-navy">What we build for RV owners</h2>
+        <p class="mt-2 text-slate-600">From a beautiful booking site to automated messaging and damage workflows — everything tailored to RV rentals.</p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <article class="p-6 bg-white rounded-xl shadow-sm border border-slate-100">
+          <h3 class="text-lg font-semibold text-navy">Custom Booking Website</h3>
+          <p class="mt-2 text-slate-600 text-sm">Mobile-first, SEO-ready, booking calendar, image gallery, add-on upsells (linens, insurance, generator).</p>
+          <ul class="mt-3 text-sm space-y-2 text-slate-600">
+            <li>Fast pages, photo optimization</li>
+            <li>Stripe + PayPal ready (or Airbnb sync)</li>
+            <li>Owner dashboard & inquiries feed</li>
+          </ul>
+        </article>
+
+        <article class="p-6 bg-white rounded-xl shadow-sm border border-slate-100">
+          <h3 class="text-lg font-semibold text-navy">Guest Automation</h3>
+          <p class="mt-2 text-slate-600 text-sm">Automated pre-check messages, pickup instructions, damage photo collection, and checkout reminders via SMS & email.</p>
+        </article>
+
+        <article class="p-6 bg-white rounded-xl shadow-sm border border-slate-100">
+          <h3 class="text-lg font-semibold text-navy">Maintenance & Ops</h3>
+          <p class="mt-2 text-slate-600 text-sm">Maintenance logs, automated reminders, and damage claim workflows to simplify operations and protect your asset.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="container mx-auto py-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h3 class="text-2xl font-bold text-navy">Automation features that save you time</h3>
+          <p class="mt-2 text-slate-600">Set it up once — get bookings and spend your time on what matters.</p>
+
+          <ul class="mt-6 space-y-3">
+            <li class="flex gap-3 items-start">
+              <svg class="h-6 w-6 text-indigo-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
+              <div>
+                <div class="font-medium text-slate-800">Automated guest messaging</div>
+                <div class="text-sm text-slate-600">Templates for pre-check, arrival, and checkout messages with conditional rules for late arrivals or damage reports.</div>
+              </div>
+            </li>
+
+            <li class="flex gap-3 items-start">
+              <svg class="h-6 w-6 text-indigo-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
+              <div>
+                <div class="font-medium text-slate-800">Damage photo workflow</div>
+                <div class="text-sm text-slate-600">Collect timestamped photos, auto-create a maintenance ticket, and notify the guest for quick resolution.</div>
+              </div>
+            </li>
+
+            <li class="flex gap-3 items-start">
+              <svg class="h-6 w-6 text-indigo-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/></svg>
+              <div>
+                <div class="font-medium text-slate-800">Dynamic pricing & calendar sync</div>
+                <div class="text-sm text-slate-600">Sync calendars across platforms and optimize nightly rates for more revenue.</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+          <h4 class="font-semibold text-navy">Tech stack we use</h4>
+          <p class="mt-2 text-sm text-slate-600">Tailwind, Stripe, Calendly/Cal.com, Zapier/Make, Twilio (SMS), Airtable/Notion for ops, and a lightweight CMS or headless CMS for content.</p>
+
+          <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+            <div class="p-3 rounded-md bg-slate-50">Stripe payments</div>
+            <div class="p-3 rounded-md bg-slate-50">Twilio SMS</div>
+            <div class="p-3 rounded-md bg-slate-50">Calendar sync</div>
+            <div class="p-3 rounded-md bg-slate-50">Automations (Zapier/Make)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="container mx-auto py-12">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold text-navy">Pricing & Packages</h2>
+        <p class="mt-2 text-slate-600">Pick a launch package + optional monthly management to keep everything running.</p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Launch -->
+        <div class="p-6 rounded-xl border border-slate-100 bg-white shadow-sm">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-navy">Launch — One-time</h3>
+            <div class="text-sm text-slate-500">Best for new hosts</div>
+          </div>
+          <div class="mt-4 text-3xl font-bold text-indigo-600">$2,000</div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>Custom booking website (up to 8 pages)</li>
+            <li>Booking calendar & Stripe setup</li>
+            <li>Photo optimization & SEO</li>
+            <li>3 automated guest message templates</li>
+            <li>7-day launch timeline</li>
+          </ul>
+          <a href="#contact" class="mt-6 inline-block w-full text-center bg-navy text-white px-4 py-2 rounded-md">Get started</a>
+        </div>
+
+        <!-- Growth -->
+        <div class="p-6 rounded-xl border border-indigo-100 bg-indigo-50/60 shadow-md">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-navy">Growth — One-time</h3>
+            <div class="text-sm text-navy">Popular</div>
+          </div>
+          <div class="mt-4 text-3xl font-bold text-navy">$3,500</div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>Everything in Launch</li>
+            <li>Advanced automation flows (damage workflow, reminders)</li>
+            <li>Dynamic pricing setup</li>
+            <li>Custom add-on upsell flow</li>
+            <li>Owner training + 30 days support</li>
+          </ul>
+          <a href="#contact" class="mt-6 inline-block w-full text-center bg-navy text-white px-4 py-2 rounded-md">Book Growth</a>
+        </div>
+
+        <!-- Monthly -->
+        <div class="p-6 rounded-xl border border-slate-100 bg-white shadow-sm">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold text-navy">Monthly Management</h3>
+            <div class="text-sm text-slate-500">Recurring</div>
+          </div>
+          <div class="mt-4 text-3xl font-bold text-indigo-600">$450 / month</div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>Ongoing messaging & calendar sync</li>
+            <li>Pricing checks & listing updates</li>
+            <li>Damage claim support</li>
+            <li>Monthly performance report</li>
+          </ul>
+          <a href="#contact" class="mt-6 inline-block w-full text-center bg-navy text-white px-4 py-2 rounded-md">Add management</a>
+        </div>
+      </div>
+
+      <!-- Digital products -->
+      <div id="products" class="mt-10">
+        <h4 class="text-lg font-semibold text-navy">Digital products (passive income)</h4>
+        <p class="text-sm text-slate-600 mt-2">Template packs you can sell to new RV hosts.</p>
+
+        <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="p-3 rounded-md border border-slate-100 bg-white text-sm">
+            <div class="font-medium">Rental Contract Template</div>
+            <div class="text-slate-600 mt-1">$49</div>
+          </div>
+          <div class="p-3 rounded-md border border-slate-100 bg-white text-sm">
+            <div class="font-medium">Check-in / Check-out Forms</div>
+            <div class="text-slate-600 mt-1">$29</div>
+          </div>
+          <div class="p-3 rounded-md border border-slate-100 bg-white text-sm">
+            <div class="font-medium">Maintenance Log Template</div>
+            <div class="text-slate-600 mt-1">$19</div>
+          </div>
+          <div class="p-3 rounded-md border border-slate-100 bg-white text-sm">
+            <div class="font-medium">Starter Website Theme</div>
+            <div class="text-slate-600 mt-1">$79</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="container mx-auto py-12">
+      <div class="text-center">
+        <h3 class="text-2xl font-bold text-navy">Owners who saw immediate results</h3>
+        <p class="mt-2 text-slate-600">Real RV owners — real growth.</p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <blockquote class="p-6 bg-white rounded-xl border border-slate-100 shadow-sm">
+          <p class="text-slate-700">"We launched in 6 days and bookings increased 34% the first month. The automated messages save me hours every week."</p>
+          <footer class="mt-4 text-sm text-slate-500">— Jamie, Kodiak Owner</footer>
+        </blockquote>
+
+        <blockquote class="p-6 bg-white rounded-xl border border-slate-100 shadow-sm">
+          <p class="text-slate-700">"They handled Stripe setup, damage workflows, and cleaners — now I get consistent 5-star reviews."</p>
+          <footer class="mt-4 text-sm text-slate-500">— Luis, Beach RV Host</footer>
+        </blockquote>
+
+        <blockquote class="p-6 bg-white rounded-xl border border-slate-100 shadow-sm">
+          <p class="text-slate-700">"Monthly management is worth it — I focus on maintaining the rig and they manage everything else."</p>
+          <footer class="mt-4 text-sm text-slate-500">— Ava, Full-time Host</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="container mx-auto py-12">
+      <div class="max-w-3xl mx-auto bg-white rounded-xl p-6 shadow-sm border border-slate-100">
+        <h3 class="text-xl font-bold text-navy">Ready to get more bookings?</h3>
+        <p class="mt-2 text-slate-600">Tell us a bit about your RV and goals. We'll reply within 24 hours with a custom plan.</p>
+
+        <form id="leadForm" class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4" onsubmit="return handleSubmit(event)">
+          <div class="col-span-1">
+            <label for="name" class="block text-sm font-medium text-slate-700">Full name</label>
+            <input id="name" name="name" required class="mt-1 block w-full rounded-md border border-slate-200 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-200">
+          </div>
+
+          <div class="col-span-1">
+            <label for="email" class="block text-sm font-medium text-slate-700">Email</label>
+            <input id="email" name="email" type="email" required class="mt-1 block w-full rounded-md border border-slate-200 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-200">
+          </div>
+
+          <div class="col-span-1 md:col-span-2">
+            <label for="message" class="block text-sm font-medium text-slate-700">Tell us about your RV & what you want</label>
+            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full rounded-md border border-slate-200 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-200" placeholder="Year, make, model, current listing link (if any), and top 3 goals"></textarea>
+          </div>
+
+          <div class="col-span-1 md:col-span-2 flex items-center gap-4">
+            <button type="submit" class="bg-navy text-white px-5 py-3 rounded-md">Send my plan</button>
+            <div class="text-sm text-slate-500">Or book a demo: <a href="#" class="text-indigo-600 font-medium">Calendly / Cal.com</a></div>
+          </div>
+
+          <div id="formMsg" class="col-span-1 md:col-span-2 text-sm text-green-600 hidden">Thanks! We'll be in touch soon.</div>
+        </form>
+
+        <p class="mt-4 text-xs text-slate-500">By contacting you agree to our terms. We don't sell your info.</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-200 mt-12 bg-white">
+      <div class="container mx-auto py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="text-sm text-slate-600">© <span id="year"></span> RV Rental Automation — All rights reserved.</div>
+        <div class="flex gap-4">
+          <a href="#" class="text-slate-600 text-sm hover:underline">Privacy</a>
+          <a href="#" class="text-slate-600 text-sm hover:underline">Terms</a>
+          <a href="#" class="text-slate-600 text-sm hover:underline">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // small menu toggle for mobile
+    const menuBtn = document.getElementById('menuBtn');
+    if (menuBtn) {
+      menuBtn.addEventListener('click', () => {
+        alert('Mobile menu placeholder — I can add a slide-over menu if you want.');
+      });
+    }
+
+    // year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // simple form handler (no back-end)
+    function handleSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if (!name || !email || !message) {
+        alert('Please fill all fields.');
+        return false;
+      }
+
+      // Example: show confirmation and log payload — replace with real POST to your server or Zapier webhook
+      const payload = { name, email, message, submittedAt: new Date().toISOString() };
+      console.log('Lead submitted:', payload);
+      document.getElementById('formMsg').classList.remove('hidden');
+      // optionally clear form
+      e.target.reset();
+      return false;
+    }
+  </script>
+</body>
+</html>
